@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost_SQLEXPRESS"
+  DTS:DTSID="{86940919-FA8A-4C32-9E1B-93790DFDED80}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-SSIS_Pruebas-{86940919-FA8A-4C32-9E1B-93790DFDED80}localhost\SQLEXPRESS;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
