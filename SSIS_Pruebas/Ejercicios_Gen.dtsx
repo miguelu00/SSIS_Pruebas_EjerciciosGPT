@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Ejercicios_Gen"
   DTS:PackageType="5"
-  DTS:VersionBuild="88"
-  DTS:VersionGUID="{56D6495B-ABB5-4935-9E36-18DE096CE79B}">
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{A2BDFB4A-2CC6-4212-9050-587AD4F8C380}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -121,6 +121,60 @@
               DTS:TextQualified="True"
               DTS:ObjectName="Email"
               DTS:DTSID="{438DC346-B6FF-498D-A204-FB52422494D3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[empleados.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{68221AD7-A754-46DA-92D9-E7D5520B346C}"
+      DTS:ObjectName="empleados.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\miguel.fuentes.vale\Documents\SQL Server Management Studio\csv\empleados.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{49E96E34-B48A-4430-8742-D5FFAC63E1A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre"
+              DTS:DTSID="{D7942323-2D0A-460F-8294-78322146129A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Apellido"
+              DTS:DTSID="{FC8E0C70-1C2D-4E07-BC46-AEDF5A3F39F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Salario"
+              DTS:DTSID="{3961C77F-F5DF-4C88-B02E-792F315CC979}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -372,7 +426,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="fechaActualStr">
       <DTS:VariableValue
-        DTS:DataType="8">2024_6_10_0Pedidos.CSV</DTS:VariableValue>
+        DTS:DataType="8">2024_6_12_0Pedidos.CSV</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1008,11 +1062,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Ejercicio 2\Destino de OLE DB"
+              refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Destino de OLE DB"
+              name="Destino tabla Employees_MediaSalarios"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1065,7 +1119,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Ejercicio 2\Destino de OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -1073,67 +1127,67 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Nombre]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].Columns[Nombre]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Nombre"
-                      externalMetadataColumnId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      externalMetadataColumnId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
                       lineageId="Package\Ejercicio 2\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nombre]" />
                     <inputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Apellido]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].Columns[Apellido]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Apellido"
-                      externalMetadataColumnId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
+                      externalMetadataColumnId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
                       lineageId="Package\Ejercicio 2\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Apellido]" />
                     <inputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].Columns[ID]"
                       cachedDataType="i4"
                       cachedName="ID"
-                      externalMetadataColumnId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      externalMetadataColumnId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       lineageId="Package\Ejercicio 2\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID]" />
                     <inputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Salario]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].Columns[Salario]"
                       cachedDataType="r4"
                       cachedName="Salario"
-                      externalMetadataColumnId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Salario]"
+                      externalMetadataColumnId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[Salario]"
                       lineageId="Package\Ejercicio 2\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Salario]" />
                     <inputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[AVG_Salario]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].Columns[AVG_Salario]"
                       cachedDataType="r8"
                       cachedName="AVG_Salario"
-                      externalMetadataColumnId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AVG_Salario]"
+                      externalMetadataColumnId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[AVG_Salario]"
                       lineageId="Package\Ejercicio 2\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[AVG_Salario]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
                       dataType="wstr"
                       length="50"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
                       dataType="wstr"
                       length="50"
                       name="Apellido" />
                     <externalMetadataColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Salario]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[Salario]"
                       dataType="r4"
                       name="Salario" />
                     <externalMetadataColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[AVG_Salario]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB].ExternalColumns[AVG_Salario]"
                       dataType="r8"
                       name="AVG_Salario" />
                   </externalMetadataColumns>
@@ -1141,22 +1195,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Ejercicio 2\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Ejercicio 2\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Ejercicio 2\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Ejercicio 2\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1742,7 +1796,7 @@
               startId="Package\Ejercicio 2\Origen de Empleados csv.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Ejercicio 2.Paths[Salida de Unión de todo 1]"
-              endId="Package\Ejercicio 2\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios.Inputs[Entrada de destino de OLE DB]"
               name="Salida de Unión de todo 1"
               startId="Package\Ejercicio 2\Unión de todo.Outputs[Salida de Unión de todo 1]" />
           </paths>
@@ -5927,36 +5981,6 @@ where [refTable].[ClienteID] = ?</property>
           Language="CSharp"
           ReadOnlyVariables="User::contadorPedidos2023">
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_ec4f173db3cf4a3f88ab9cf0e842f993")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_ec4f173db3cf4a3f88ab9cf0e842f993")]
-[assembly: AssemblyCopyright("Copyright @  2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -6075,6 +6099,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_ec4f173db3cf4a3f88ab9cf0e842f993.Properties.Settings.get_Default():ST_ec4f173db3cf4a3f88ab9cf0e842f993.Properties.Sett" +
+    "ings")]
+
+namespace ST_ec4f173db3cf4a3f88ab9cf0e842f993.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -6303,34 +6356,35 @@ namespace ST_ec4f173db3cf4a3f88ab9cf0e842f993
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_ec4f173db3cf4a3f88ab9cf0e842f993")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_ec4f173db3cf4a3f88ab9cf0e842f993")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_ec4f173db3cf4a3f88ab9cf0e842f993.Properties.Settings.get_Default():ST_ec4f173db3cf4a3f88ab9cf0e842f993.Properties.Sett" +
-    "ings")]
-
-namespace ST_ec4f173db3cf4a3f88ab9cf0e842f993.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -6530,14 +6584,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Tarea insertar pedidos y clientes"
+      DTS:refId="Package\SQL - CREATE OR TRUNCATE TABLA empleados_gen"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:Disabled="True"
+      DTS:DTSID="{6BC23968-E7D9-4C83-B370-D915E9B5EADC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - CREATE OR TRUNCATE TABLA empleados_gen"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{63817C4D-E839-4AFD-8A5C-CC99A251F6E4}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT TOP 1 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'empleados_gen')&#xA;&#x9;CREATE TABLE empleados_gen (&#xA;&#x9;&#x9;ID&#x9;INT&#x9;PRIMARY KEY,&#xA;&#x9;&#x9;Nombre&#x9;NVARCHAR(255),&#xA;&#x9;&#x9;Apellido NVARCHAR(255),&#xA;&#x9;&#x9;Salario&#x9;FLOAT NOT NULL&#xA;&#x9;);&#xA;ELSE&#xA;&#x9;TRUNCATE TABLE empleados_gen;&#xA;&#xA;IF NOT EXISTS (SELECT TOP 1 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'clientes_gen')&#xA;&#x9;CREATE TABLE clientes_gen (&#xA;&#x9;&#x9;[ClienteID] [int] NOT NULL,&#xA;    &#x9;&#x9;[Nombre] [nvarchar](50) NULL,&#xA;    &#x9;&#x9;[Apellidos] [nvarchar](50) NULL,&#xA;    &#x9;&#x9;[Email] [nvarchar](255) NULL&#xA;&#x9;);&#xA;ELSE&#xA;&#x9;TRUNCATE TABLE clientes_gen;&#xA;&#xA;IF NOT EXISTS (SELECT TOP 1 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'pedidos_gen')&#xA;&#x9;CREATE TABLE pedidos_gen (&#xA;&#x9;&#x9;[ClienteID] [int] NOT NULL,&#xA;&#x9;&#x9;[PedidoID] [int] NOT NULL,&#xA;&#x9;&#x9;[Fecha] [date] NOT NULL,&#xA;&#x9;&#x9;[Monto] [float] NOT NULL&#xA;&#x9;);&#xA;ELSE&#xA;&#x9;TRUNCATE TABLE pedidos_gen;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea insertar pedidos,clientes,empleados"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
       DTS:Disabled="True"
       DTS:DTSID="{7BE5283D-273A-43B3-A3BF-4E5A7B23BC8D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Tarea insertar pedidos y clientes"
+      DTS:ObjectName="Tarea insertar pedidos,clientes,empleados"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -6545,11 +6617,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           version="1">
           <components>
             <component
-              refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB"
+              refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Destino de OLE DB"
+              name="Destino tabla CLIENTES_gen"
               usesDispositions="true"
               version="4">
               <properties>
@@ -6602,7 +6674,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -6610,58 +6682,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].Columns[ClienteID]"
                       cachedDataType="ui4"
                       cachedName="ClienteID"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ClienteID]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[ClienteID]" />
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Nombre]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].Columns[Nombre]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Nombre"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Nombre]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Nombre]" />
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Apellido]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].Columns[Apellido]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Apellido"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Apellido]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Apellido]" />
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Email]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].Columns[Email]"
                       cachedDataType="wstr"
                       cachedLength="300"
                       cachedName="Email"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Email]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Email]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Email]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Email]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
                       dataType="i8"
                       name="ClienteID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
                       dataType="wstr"
                       length="255"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
                       dataType="wstr"
                       length="255"
                       name="Apellido" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Email]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Email]"
                       dataType="wstr"
                       length="300"
                       name="Email" />
@@ -6670,22 +6742,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -6694,11 +6766,158 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1"
+              refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Destino de OLE DB 1"
+              name="Destino tabla EMPLEADOS_gen"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[empleados_gen]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].Columns[ID]"
+                      cachedDataType="ui4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].Columns[Nombre]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Nombre"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Nombre]" />
+                    <inputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].Columns[Apellido]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Apellido"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Apellido]" />
+                    <inputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].Columns[Salario]"
+                      cachedDataType="r4"
+                      cachedName="Salario"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Salario]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Salario]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      dataType="wstr"
+                      length="50"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Apellido]"
+                      dataType="wstr"
+                      length="50"
+                      name="Apellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Salario]"
+                      dataType="r4"
+                      name="Salario" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino tabla PEDIDOS_gen"
               usesDispositions="true"
               version="4">
               <properties>
@@ -6751,7 +6970,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Connections[OleDbConnection]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -6759,53 +6978,53 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].Columns[ClienteID]"
                       cachedDataType="ui4"
                       cachedName="ClienteID"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[ClienteID]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[ClienteID]" />
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[PedidoID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].Columns[PedidoID]"
                       cachedDataType="ui4"
                       cachedName="PedidoID"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[PedidoID]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[PedidoID]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[PedidoID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[PedidoID]" />
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
                       cachedDataType="dbDate"
                       cachedName="Fecha"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[Fecha]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[Fecha]" />
                     <inputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
                       cachedDataType="r4"
                       cachedName="Monto"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[Monto]" />
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[Monto]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[ClienteID]"
                       dataType="i8"
                       name="ClienteID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[PedidoID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[PedidoID]"
                       dataType="i8"
                       name="PedidoID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
                       dataType="dbDate"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       dataType="r4"
                       name="Monto" />
                   </externalMetadataColumns>
@@ -6813,22 +7032,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -6837,12 +7056,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano"
+              refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Origen de archivo plano"
               localeId="3082"
-              name="Origen de archivo plano"
+              name="Origen CLIENTES csv"
               usesDispositions="true"
               version="1">
               <properties>
@@ -6857,23 +7076,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Connections[FlatFileConnection]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Clientes.csv]"
                   connectionManagerRefId="Package.ConnectionManagers[Clientes.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano]"
                   name="Salida de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
                       dataType="ui4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
                       name="ClienteID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -6888,13 +7107,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Nombre]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Nombre]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Nombre]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Nombre]"
                       length="255"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Nombre]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Nombre]"
                       name="Nombre"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -6909,13 +7128,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Apellido]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Apellido]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Apellido]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Apellido]"
                       length="255"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Apellido]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Apellido]"
                       name="Apellido"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -6930,13 +7149,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Email]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Email]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Email]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Email]"
                       length="300"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Email]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].Columns[Email]"
                       name="Email"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -6954,48 +7173,48 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
                       dataType="ui4"
                       name="ClienteID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Nombre]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Nombre]"
                       dataType="wstr"
                       length="255"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Apellido]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Apellido]"
                       dataType="wstr"
                       length="255"
                       name="Apellido" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Email]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Email]"
                       dataType="wstr"
                       length="300"
                       name="Email" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano]"
                   isErrorOut="true"
                   name="Salida de error de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       codePage="65001"
                       dataType="text"
                       description="Columna de salida de error de origen de archivo plano"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       name="Columna de salida de error de origen de archivo plano" />
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7004,12 +7223,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </outputs>
             </component>
             <component
-              refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1"
+              refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Origen de archivo plano"
               localeId="3082"
-              name="Origen de archivo plano 1"
+              name="Origen EMPLEADOS csv"
               usesDispositions="true"
               version="1">
               <properties>
@@ -7024,23 +7243,188 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Connections[FlatFileConnection]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[empleados.csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[empleados.csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[ID]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[ID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Nombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Nombre]"
+                      length="255"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Nombre]"
+                      name="Nombre"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Apellido]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Apellido]"
+                      length="255"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Apellido]"
+                      name="Apellido"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Salario]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Salario]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].Columns[Salario]"
+                      name="Salario"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[ID]"
+                      dataType="ui4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Nombre]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Apellido]"
+                      dataType="wstr"
+                      length="255"
+                      name="Apellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Salario]"
+                      dataType="r4"
+                      name="Salario" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="Origen PEDIDOS csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Pedidos.csv]"
                   connectionManagerRefId="Package.ConnectionManagers[Pedidos.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano]"
                   name="Salida de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
                       dataType="ui4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[ClienteID]"
                       name="ClienteID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -7055,12 +7439,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[PedidoID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[PedidoID]"
                       dataType="ui4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[PedidoID]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[PedidoID]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[PedidoID]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[PedidoID]"
                       name="PedidoID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -7075,12 +7459,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[Fecha]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[Fecha]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[Fecha]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[Fecha]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Fecha]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[Fecha]"
                       name="Fecha"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -7095,12 +7479,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[Monto]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[Monto]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[Monto]"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].Columns[Monto]"
+                      externalMetadataColumnId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Monto]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].Columns[Monto]"
                       name="Monto"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -7118,45 +7502,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[ClienteID]"
                       dataType="ui4"
                       name="ClienteID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[PedidoID]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[PedidoID]"
                       dataType="ui4"
                       name="PedidoID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[Fecha]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Fecha]"
                       dataType="dbDate"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano].ExternalColumns[Monto]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano].ExternalColumns[Monto]"
                       dataType="r4"
                       name="Monto" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano]"
+                  refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano]"
                   isErrorOut="true"
                   name="Salida de error de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       codePage="65001"
                       dataType="text"
                       description="Columna de salida de error de origen de archivo plano"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       name="Columna de salida de error de origen de archivo plano" />
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      refId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7167,15 +7551,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </components>
           <paths>
             <path
-              refId="Package\Tarea insertar pedidos y clientes.Paths[Salida de origen de archivo plano]"
-              endId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Tarea insertar pedidos,clientes,empleados.Paths[Salida de origen de archivo plano]"
+              endId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de archivo plano"
-              startId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+              startId="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\Tarea insertar pedidos y clientes.Paths[Salida de origen de archivo plano1]"
-              endId="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Tarea insertar pedidos,clientes,empleados.Paths[Salida de origen de archivo plano1]"
+              endId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de archivo plano"
-              startId="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1.Outputs[Salida de origen de archivo plano]" />
+              startId="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv.Outputs[Salida de origen de archivo plano]" />
+            <path
+              refId="Package\Tarea insertar pedidos,clientes,empleados.Paths[Salida de origen de archivo plano2]"
+              endId="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv.Outputs[Salida de origen de archivo plano]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -7190,6 +7579,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
       DTS:To="Package\Script mostrar num de pedidos 2023" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{932C90DC-C931-4B89-9366-40EAA407E927}"
+      DTS:From="Package\SQL - CREATE OR TRUNCATE TABLA empleados_gen"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Tarea insertar pedidos,clientes,empleados" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -7206,46 +7603,46 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 1"
-          TopLeft="141.874993657693,110.49999473095" />
+          TopLeft="141.874993657693,167.988880878555" />
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 2"
-          TopLeft="308.12498622574,108.549994823933" />
+          TopLeft="308.12498622574,166.038880971538" />
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 3"
-          TopLeft="143.124993601814,180.049991414547" />
+          TopLeft="143.124993601814,237.538877562152" />
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 4"
-          TopLeft="311.249986086041,182.64999129057" />
+          TopLeft="311.249986086041,240.138877438175" />
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 5"
-          TopLeft="145.624993490055,247.649988191128" />
+          TopLeft="145.624993490055,305.138874338733" />
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 6"
-          TopLeft="311.874986058102,251.566654702823" />
+          TopLeft="311.874986058102,309.055540850428" />
         <NodeLayout
           Size="128,42.6666666666667"
           Id="Package\Ejercicio 7"
-          TopLeft="147.499993406236,308.749985277653" />
+          TopLeft="147.499993406236,366.238871425258" />
         <NodeLayout
           Size="344,42.6666666666667"
           Id="Package\EXTRA - Eliminar registros duplicados EMPLEADOS_GEN"
-          TopLeft="409.374981699512,362.34998701334" />
+          TopLeft="409.374981699512,419.838873160945" />
         <NodeLayout
           Size="148,52"
           Id="Package\Script mostrar num de pedidos 2023"
-          TopLeft="147.499993406236,359.549984285832" />
+          TopLeft="147.499993406236,417.038870433437" />
         <NodeLayout
-          Size="232,42.6666666666667"
-          Id="Package\Tarea insertar pedidos y clientes"
-          TopLeft="170.624992372468,40.9499980473519" />
+          Size="277.333333333334,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados"
+          TopLeft="142.499993629753,96.4888842879403" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="147.499993406236,330.083318610986">
+          TopLeft="147.499993406236,387.572204758591">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7269,6 +7666,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                     Point3="-18.5,55.4666656748457" />
                   <mssgle:LineSegment
                     End="-7.5,55.4666656748457" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="330,42.6666666666667"
+          Id="Package\SQL - CREATE OR TRUNCATE TABLA empleados_gen"
+          TopLeft="118.333328043421,0.722222187783988" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="282.249994169921,43.3888888544507">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.0999954334896"
+              Start="0,0"
+              End="0,45.5999954334896">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5999954334896" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7407,23 +7830,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Ejercicio 2\Origen de Empleados csv 1"
           TopLeft="363.999989151955,56.6666680375735" />
         <NodeLayout
-          Size="169.333333333334,42.6666666666667"
-          Id="Package\Ejercicio 2\Destino de OLE DB"
-          TopLeft="255.999992370606,365.333322445552" />
+          Size="265.333333333334,42.6666666666667"
+          Id="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios"
+          TopLeft="211.833327020209,362.833322520058" />
         <EdgeLayout
           Id="Package\Ejercicio 2.Paths[Salida de Unión de todo 1]"
-          TopLeft="342.333325485389,286.6666593949">
+          TopLeft="344.24999281019,286.666659394901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78.6666630506517"
+              EndConnector="0,76.1666631251572"
               Start="0,0"
-              End="0,71.1666630506517">
+              End="0,68.6666631251572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.1666630506517" />
+                    End="0,68.6666631251572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7552,7 +7975,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Ejercicio 2\Destino de OLE DB">
+    design-time-name="Package\Ejercicio 2\Destino tabla Employees_MediaSalarios">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7578,25 +8001,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Ejercicio 3\Origen pedidos CSV"
           TopLeft="215.677078547111,33.9444435689184" />
         <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\Ejercicio 3\Conversión de datos"
+          TopLeft="340.238085084019,349.285709027733" />
+        <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Ejercicio 3\División condicional"
           TopLeft="222.84374499026,118.777774354153" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Ejercicio 3\Origen clientes CSV"
+          TopLeft="442.552071832276,34.3111114092005" />
         <NodeLayout
           Size="117.333333333334,42.6666666666667"
           Id="Package\Ejercicio 3\Ordenar"
           TopLeft="254.59374422161,195.677771876389" />
         <NodeLayout
-          Size="232,42.6666666666667"
-          Id="Package\Ejercicio 3\INNER JOIN (pedidos y clientes)"
-          TopLeft="310.677071431807,282.661100124254" />
+          Size="125.333333333334,42.6666666666667"
+          Id="Package\Ejercicio 3\Búsqueda"
+          TopLeft="367.380941417956,420.238088319699" />
         <NodeLayout
           Size="200,42.6666666666667"
           Id="Package\Ejercicio 3\Destino VentasDetalle DB"
           TopLeft="331.008920544626,500.391453938419" />
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Ejercicio 3\Origen clientes CSV"
-          TopLeft="442.552071832276,34.3111114092005" />
+          Size="232,42.6666666666667"
+          Id="Package\Ejercicio 3\INNER JOIN (pedidos y clientes)"
+          TopLeft="310.677071431807,282.661100124254" />
         <EdgeLayout
           Id="Package\Ejercicio 3.Paths[Salida de origen de archivo plano1]"
           TopLeft="528.677071500105,76.9777780758671">
@@ -7710,82 +8141,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Ejercicio 3.Paths[Pedidos ID 5 y 6]"
-          TopLeft="311.052077939268,161.44444102082">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.2333308555688"
-              Start="0,0"
-              End="0,26.7333308555688">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.7333308555688" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-53.317265625,7.5619779277844,106.63453125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\Ejercicio 3\Conversión de datos"
-          TopLeft="340.238085084019,349.285709027733" />
-        <EdgeLayout
-          Id="Package\Ejercicio 3.Paths[Salida de combinación de mezcla]"
-          TopLeft="427.12424492458,325.327766790921">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23.9579422368127"
-              Start="0,0"
-              End="0,16.4579422368127">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4579422368127" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="125.333333333334,42.6666666666667"
-          Id="Package\Ejercicio 3\Búsqueda"
-          TopLeft="367.380941417956,420.238088319699" />
-        <EdgeLayout
-          Id="Package\Ejercicio 3.Paths[Salida de conversión de datos]"
-          TopLeft="428.809513250987,391.9523756944">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.2857126252993"
-              Start="0,0"
-              End="0,20.7857126252993">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.7857126252993" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Ejercicio 3.Paths[Salida de entradas no coincidentes de búsqueda]"
           TopLeft="430.528264314624,462.904754986366">
           <EdgeLayout.Curve>
@@ -7809,9 +8164,100 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Ejercicio 3.Paths[Salida de conversión de datos]"
+          TopLeft="428.809513250987,391.9523756944">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.2857126252993"
+              Start="0,0"
+              End="0,20.7857126252993">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7857126252993" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Ejercicio 3.Paths[Salida de combinación de mezcla]"
+          TopLeft="427.12424492458,325.327766790921">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.9579422368127"
+              Start="0,0"
+              End="0,16.4579422368127">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4579422368127" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Ejercicio 3.Paths[Pedidos ID 5 y 6]"
+          TopLeft="311.052077939268,161.44444102082">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.2333308555688"
+              Start="0,0"
+              End="0,26.7333308555688">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.7333308555688" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-53.317265625,7.5619779277844,106.63453125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Ejercicio 3\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[VentasDetalle]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Ejercicio 3\Destino VentasDetalle DB">
     <Properties>
@@ -8053,7 +8499,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\Ejercicio 5\Destino nombres M%"
-          TopLeft="84.2857117738043,268.571420567376" />
+          TopLeft="81.6190451866104,268.571420567376" />
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\Ejercicio 5\División por nombre"
@@ -8230,25 +8676,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Ejercicio 5.Paths[Nombres empieza por M]"
-          TopLeft="175.0714260063,220.523804223254">
+          TopLeft="173.738092712703,220.523804223254">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.0476163441227"
+              EndConnector="0,48.0476163441223"
               Start="0,0"
-              End="0,40.5476163441227">
+              End="0,40.5476163441223">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.5476163441227" />
+                    End="0,40.5476163441223" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-53.980234375,14.4691206720614,107.96046875,11.609375"
+              BoundingBox="-53.980234375,14.4691206720612,107.96046875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8543,40 +8989,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </LayoutInfo>
   </TaskHost>
   <TaskHost
-    design-time-name="Package\Tarea insertar pedidos y clientes">
+    design-time-name="Package\Tarea insertar pedidos,clientes,empleados">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
-          Id="Package\Tarea insertar pedidos y clientes\Destino de OLE DB 1"
-          TopLeft="278.666658361753,133.111105766562" />
+          Size="212,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla PEDIDOS_gen"
+          TopLeft="274.380944203763,138.11110561755" />
         <NodeLayout
-          Size="192,42.6666666666667"
-          Id="Package\Tarea insertar pedidos y clientes\Origen de archivo plano"
-          TopLeft="38.6666655143098,36.1111086573869" />
+          Size="180,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados\Origen CLIENTES csv"
+          TopLeft="43.6666653652983,43.2539655873703" />
         <NodeLayout
-          Size="169.333333333334,42.6666666666667"
-          Id="Package\Tarea insertar pedidos y clientes\Destino de OLE DB"
-          TopLeft="48.6666652162868,133.111105766562" />
+          Size="214.666666666667,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen"
+          TopLeft="26.5238087333383,138.825391310549" />
         <NodeLayout
-          Size="200.666666666667,42.6666666666667"
-          Id="Package\Tarea insertar pedidos y clientes\Origen de archivo plano 1"
-          TopLeft="268.666658659777,40.1111085381769" />
+          Size="176,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados\Origen PEDIDOS csv"
+          TopLeft="290.095229449727,45.1111083891653" />
         <EdgeLayout
-          Id="Package\Tarea insertar pedidos y clientes.Paths[Salida de origen de archivo plano1]"
-          TopLeft="368.499991844098,82.7777752048437">
+          Id="Package\Tarea insertar pedidos,clientes,empleados.Paths[Salida de origen de archivo plano1]"
+          TopLeft="379.238086826745,87.777775055832">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.3333305617174"
+              EndConnector="0,50.3333305617184"
               Start="0,0"
-              End="0,42.8333305617174">
+              End="0,42.8333305617184">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.8333305617174" />
+                    End="0,42.8333305617184" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8586,19 +9032,49 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea insertar pedidos y clientes.Paths[Salida de origen de archivo plano]"
-          TopLeft="133.999998698632,78.7777753240527">
+          Id="Package\Tarea insertar pedidos,clientes,empleados.Paths[Salida de origen de archivo plano]"
+          TopLeft="133.761903715985,85.920632254037">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.3333304425082"
+              EndConnector="0,52.9047590565118"
               Start="0,0"
-              End="0,46.8333304425082">
+              End="0,45.4047590565118">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.8333304425082" />
+                    End="0,45.4047590565118" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="190.666666666667,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados\Origen EMPLEADOS csv"
+          TopLeft="539.285698213748,44.9999986588956" />
+        <NodeLayout
+          Size="226.666666666667,42.6666666666667"
+          Id="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen"
+          TopLeft="528.571412818773,136.428567362683" />
+        <EdgeLayout
+          Id="Package\Tarea insertar pedidos,clientes,empleados.Paths[Salida de origen de archivo plano2]"
+          TopLeft="638.261888849594,87.6666653255622">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.761902037121"
+              Start="0,0"
+              End="0,41.261902037121">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.261902037121" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8611,7 +9087,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea insertar pedidos y clientes\Destino de OLE DB">
+    design-time-name="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla CLIENTES_gen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8624,25 +9100,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Ejercicio 3\Búsqueda">
+    design-time-name="Package\Tarea insertar pedidos,clientes,empleados\Destino tabla EMPLEADOS_gen">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[VentasDetalle]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
